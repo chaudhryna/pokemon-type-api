@@ -1,42 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-    	<meta charset="utf-8">
-    	<meta name="description" content="This is where your description goes">
-    	<meta name="keywords" content="one, two, three">
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-		<title>Title in the tab</title>
+		<title>Pokemon?</title>
 
 		<!-- external CSS link -->
 		<link rel="stylesheet" href="css/normalize.css">
 		<link rel="stylesheet" href="css/style.css">
 	</head>
 	<body>
-
-		<h1>Which Pokemon?</h1>
-	
-		<div id="container">
-			<select id="poke1">
-				<option id="option-poke1"></option>
-			</select>
-			<select id="poke2">
-				<option id="option-poke2"></option>
-			</select>
-			<button type="button" name="button">Check Types</button>
-		</div>
-
-		<h2>Result</h2>
-
-		<div id="card-container">
+		<header>
+			<h1>WHAT TYPE IS YOUR POKEMON?</h1>
+			
+			<div id="container">
+				<select id="poke1">
+					<option id="option-poke1"></option>
+				</select>
+				<select id="poke2">
+					<option id="option-poke2"></option>
+				</select>
+				<button type="button" name="button">Check Types</button>
+			</div>
+			
+			<h2>Result</h2>
+		</header>
+		
+		<div class="card-container hidden">
 			<div class="card">
+				<h4 class="poke1Name"></h4>
+				<hr>
 				<img id='pokeImg1' src="" alt="">
-					<h4 class="poke1Name"></h4>
-					<p class="poke1Type"></p>
+				<p class="poke1Type"></p>
 			</div>
 		
 			<div class="card">
-				<img id='pokeImg2' src="" alt="">
 				<h4 class="poke2Name"></h4>
+				<hr>
+				<img id='pokeImg2' src="" alt="">
 				<p class="poke2Type"></p>
 			</div>
 		</div>

@@ -13,6 +13,7 @@ function loadSelections() {
   fetch(url) // fetch all pokemon
     .then(res => res.json()) // parse response as JSON
     .then(data => {
+      
       const poke1List = data.results.map(poke => poke.name) // get all pokemon names
       const poke2List = data.results.map(poke => poke.name) // get all pokemon names
 
@@ -33,6 +34,7 @@ function loadSelections() {
 document.querySelector('button').addEventListener('click', getFetch)
 
 function getFetch(){
+  
   selectPoke1 = document.querySelector('#poke1')
   choice1 = selectPoke1.value
   selectPoke2 = document.querySelector('#poke2')
@@ -47,6 +49,7 @@ function getFetch(){
   fetch(url)
       .then(res => res.json()) // parse response as JSON
       .then(data => {
+        document.querySelector('.card-container').classList.remove('hidden')
         pokeStore.push(data.types[0].type.name)
         pokeImg.push(data.sprites.front_default)
 
