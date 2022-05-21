@@ -8,7 +8,7 @@ let poke2 = document.querySelector('#poke2')
 document.DOM_Content_Loaded = loadSelections()
 
 function loadSelections() {
-  const url = 'https://pokeapi.co/api/v2/pokemon/'
+  const url = 'https://pokeapi.co/api/v2/pokemon?limit=100000&offset=0'
 
   fetch(url) // fetch all pokemon
     .then(res => res.json()) // parse response as JSON
